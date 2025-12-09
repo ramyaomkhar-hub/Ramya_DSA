@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build & run C",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-Wall", "-Wextra", "-g",
+                "${file}",
+                "-o", "${fileDirname}\\output\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": { "cwd": "${workspaceFolder}" },
+            "group": { "kind": "build", "isDefault": true },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            },
+            "isBackground": false,
+            "problemMatcher": ["$gcc"],
+            "dependsOn": []
+        },
+        {
+            "label": "run exe",
+            "type": "shell",
+            "command": "${fileDirname}\\output\\${fileBasenameNoExtension}.exe",
+            "options": { "cwd": "${workspaceFolder}" },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "C build & run",
+            "dependsOrder": "sequence",
+            "dependsOn": ["build & run C", "run exe"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
