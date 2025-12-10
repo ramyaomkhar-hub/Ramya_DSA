@@ -21,7 +21,7 @@ int main(void) {
     printf("&arr %d\n",&arr); // show the address of the 2D array
     printf("arr_t %d\n",arr_t); // show the address of the address of 1D array
     printf("*arr_t %d\n",*arr_t); // show the address of the value of the arr_t[0]  1D array
-    printf("&arr_t %d\n",&arr_t); // show the address of the address of the 1D array
+    printf("&arr_t %d\n",&arr_t); // show the address of the address of the 1D  array
 
     printf("rows %d : cols %d \n", rows, cols);
 
