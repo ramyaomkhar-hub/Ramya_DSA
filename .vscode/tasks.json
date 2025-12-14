@@ -3,11 +3,11 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "C: build and run",
+            "label": "C: build current + linked_list and run",
             "command": "bash",
             "args": [
                 "-c",
-                "mkdir -p output && gcc -g ${file} -o output/${fileBasenameNoExtension} && ./output/${fileBasenameNoExtension}"
+                "mkdir -p output && gcc -g -I. ${file} linked_list/single_linked_list.c -o output/${fileBasenameNoExtension} && ./output/${fileBasenameNoExtension}"
             ],
             "options": { "cwd": "${workspaceFolder}" },
             "presentation": {

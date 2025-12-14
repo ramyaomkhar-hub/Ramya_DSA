@@ -1,0 +1,2 @@
+main.o: /home/harkum/Documents/myCode/Ramya_DSA/main.c \
+ /home/harkum/Documents/myCode/Ramya_DSA/linked_list/single_linkedlist.h
